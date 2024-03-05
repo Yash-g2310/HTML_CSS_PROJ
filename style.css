@@ -25,8 +25,8 @@ body{
     justify-content: space-between;
 }
 
-.item-1A{
-    max-width: 100%;
+.iitr-logo{
+    max-width: 83.334%;
     height: auto;
 }
 
@@ -126,11 +126,19 @@ body{
     background-color: #80B3D9;
 }
 
-.no-bullet{
-    font-size: clamp(8px, 1.75vw, 14px);
+
+
+.nav-bar a:link,
+.nav-bar a:visited,
+.nav-bar a:hover,
+.nav-bar a:active{
+    text-decoration: none;
     color: #232323;
+}
+
+.nav-bar{
+    font-size: clamp(8px, 1.75vw, 14px);
     letter-spacing: 2%;
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -139,6 +147,26 @@ body{
     margin-bottom: 1.3889vw;   
     
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    margin-left: 8.334vw;
+}
+
+#hamburger-toggle {
+    margin-left: 8.334vw;
+    display: none;
+}
+
 
 .container-B{
     margin-bottom: 3.6284vw;
@@ -297,8 +325,9 @@ main{
 
 .container-C{
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
-    gap:3rem;
+    gap:1rem;
     margin-left: 8.334vw;
     margin-right: 8.334vw;
     margin-bottom: 5rem;
@@ -353,6 +382,7 @@ main{
     padding-left: 8.334vw;
     padding-right: 8.334vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -369,4 +399,28 @@ padding-left: 8.334vw;
 padding-right: 8.334vw;
     background-color: #232323;
     color: white;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        width: 83.334%;
+        margin-left: 8.334vw;
+        text-align: center;
+    }
+
+    .nav-bar a {
+        display: block;
+        border-top: 1px solid #444;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    #hamburger-toggle:checked + .hamburger + .nav-bar {
+        display: block;
+    }
 }
